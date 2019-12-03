@@ -11,6 +11,20 @@ import './styles/App.css';
 import { routes as urls, fullURL } from './data/app/routes';
 
 /***************************************
+  STATE
+***************************************/
+const init = {
+  'user' : {
+    'name' : 'jason-glassbrook',
+    'data' : {
+      'self' : {},
+      'followers' : [{}],
+      'following' : [{}],
+    },
+  },
+};
+
+/***************************************
   COMPONENT
 ***************************************/
 class App extends React.Component {
@@ -18,6 +32,7 @@ class App extends React.Component {
     console.log (`>>> App : constructing... <<<`);
     super (props);
     this.state = {
+      'user' : init.user,
     };
   };
 
