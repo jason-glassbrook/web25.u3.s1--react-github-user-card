@@ -9,6 +9,8 @@ export const routes = {
       base : 'https://api.github.com',
       path : {
         user : (username) => (`/users/${username}`),
+        user_followers : (username) => (`/users/${username}/followers`),
+        user_following : (username) => (`/users/${username}/following`),
       }
     },
   },
