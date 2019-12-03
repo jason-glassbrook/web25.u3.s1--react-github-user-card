@@ -1,0 +1,117 @@
+/*******************************************************************************
+  TAILWIND : COLORS
+--------------------------------------------------------------------------------
+  from: https://tailwindcss.com/
+*******************************************************************************/
+
+:root {
+  /*/ Gray /*/
+  --tw-gray-100 : #F7FAFC;
+  --tw-gray-200 : #EDF2F7;
+  --tw-gray-300 : #E2E8F0;
+  --tw-gray-400 : #CBD5E0;
+  --tw-gray-500 : #A0AEC0;
+  --tw-gray-600 : #718096;
+  --tw-gray-700 : #4A5568;
+  --tw-gray-800 : #2D3748;
+  --tw-gray-900 : #1A202C;
+
+  /*/ Red /*/
+  --tw-red-100 : #FFF5F5;
+  --tw-red-200 : #FED7D7;
+  --tw-red-300 : #FEB2B2;
+  --tw-red-400 : #FC8181;
+  --tw-red-500 : #F56565;
+  --tw-red-600 : #E53E3E;
+  --tw-red-700 : #C53030;
+  --tw-red-800 : #9B2C2C;
+  --tw-red-900 : #742A2A;
+
+  /*/ Orange /*/
+  --tw-orange-100 : #FFFAF0;
+  --tw-orange-200 : #FEEBC8;
+  --tw-orange-300 : #FBD38D;
+  --tw-orange-400 : #F6AD55;
+  --tw-orange-500 : #ED8936;
+  --tw-orange-600 : #DD6B20;
+  --tw-orange-700 : #C05621;
+  --tw-orange-800 : #9C4221;
+  --tw-orange-900 : #7B341E;
+
+  /*/ Yellow /*/
+  --tw-yellow-100 : #FFFFF0;
+  --tw-yellow-200 : #FEFCBF;
+  --tw-yellow-300 : #FAF089;
+  --tw-yellow-400 : #F6E05E;
+  --tw-yellow-500 : #ECC94B;
+  --tw-yellow-600 : #D69E2E;
+  --tw-yellow-700 : #B7791F;
+  --tw-yellow-800 : #975A16;
+  --tw-yellow-900 : #744210;
+
+  /*/ Green /*/
+  --tw-green-100 : #F0FFF4;
+  --tw-green-200 : #C6F6D5;
+  --tw-green-300 : #9AE6B4;
+  --tw-green-400 : #68D391;
+  --tw-green-500 : #48BB78;
+  --tw-green-600 : #38A169;
+  --tw-green-700 : #2F855A;
+  --tw-green-800 : #276749;
+  --tw-green-900 : #22543D;
+
+  /*/ Teal /*/
+  --tw-teal-100 : #E6FFFA;
+  --tw-teal-200 : #B2F5EA;
+  --tw-teal-300 : #81E6D9;
+  --tw-teal-400 : #4FD1C5;
+  --tw-teal-500 : #38B2AC;
+  --tw-teal-600 : #319795;
+  --tw-teal-700 : #2C7A7B;
+  --tw-teal-800 : #285E61;
+  --tw-teal-900 : #234E52;
+
+  /*/ Blue /*/
+  --tw-blue-100 : #EBF8FF;
+  --tw-blue-200 : #BEE3F8;
+  --tw-blue-300 : #90CDF4;
+  --tw-blue-400 : #63B3ED;
+  --tw-blue-500 : #4299E1;
+  --tw-blue-600 : #3182CE;
+  --tw-blue-700 : #2B6CB0;
+  --tw-blue-800 : #2C5282;
+  --tw-blue-900 : #2A4365;
+
+  /*/ Indigo /*/
+  --tw-indigo-100 : #EBF4FF;
+  --tw-indigo-200 : #C3DAFE;
+  --tw-indigo-300 : #A3BFFA;
+  --tw-indigo-400 : #7F9CF5;
+  --tw-indigo-500 : #667EEA;
+  --tw-indigo-600 : #5A67D8;
+  --tw-indigo-700 : #4C51BF;
+  --tw-indigo-800 : #434190;
+  --tw-indigo-900 : #3C366B;
+
+  /*/ Purple /*/
+  --tw-purple-100 : #FAF5FF;
+  --tw-purple-200 : #E9D8FD;
+  --tw-purple-300 : #D6BCFA;
+  --tw-purple-400 : #B794F4;
+  --tw-purple-500 : #9F7AEA;
+  --tw-purple-600 : #805AD5;
+  --tw-purple-700 : #6B46C1;
+  --tw-purple-800 : #553C9A;
+  --tw-purple-900 : #44337A;
+
+  /*/ Pink /*/
+  --tw-pink-100 : #FFF5F7;
+  --tw-pink-200 : #FED7E2;
+  --tw-pink-300 : #FBB6CE;
+  --tw-pink-400 : #F687B3;
+  --tw-pink-500 : #ED64A6;
+  --tw-pink-600 : #D53F8C;
+  --tw-pink-700 : #B83280;
+  --tw-pink-800 : #97266D;
+  --tw-pink-900 : #702459;
+}
