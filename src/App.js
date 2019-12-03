@@ -4,6 +4,9 @@ import React from 'react';
 /// styles ///
 import './styles/App.css';
 
+/// data ///
+import { routes as urls, fullURL } from './data/app/routes';
+
 /***************************************
   COMPONENT
 ***************************************/
