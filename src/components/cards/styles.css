@@ -1,0 +1,60 @@
+/*******************************************************************************
+  CARD STYLES
+*******************************************************************************/
+
+@import url('../../../styles/app-sizes.css');
+@import url('../../../styles/app-colors.css');
+
+/***************************************
+  CARDS
+***************************************/
+
+.card {
+  --card-inner-border: var(--size-01-px) solid var(--gray-300);
+  /*------------------------------------*/
+  background: White;
+  box-shadow: 0 0 var(--size-04-px) rgba(0 , 0 , 0 , 50%);
+
+  border-radius: var(--size-05-px);
+
+  overflow: hidden;
+}
+
+/*******************
+  CARD SECTIONS
+*******************/
+
+/*/ spacing /*/
+.card > * {
+  padding: var(--size-05-px);
+}
+
+/*/ background /*/
+.card-head , .card-foot {
+  background-color: var(--light);
+}
+
+/*/ direction-based borders /*/
+.card.t-to-b > .card-head {
+  border-bottom: var(--card-inner-border);
+}
+.card.t-to-b > .card-foot {
+  border-top: var(--card-inner-border);
+}
+.card.l-to-r > .card-head {
+  border-right: var(--card-inner-border);
+}
+.card.l-to-r > .card-foot {
+  border-left: var(--card-inner-border);
+}
+
+/***************************************
+  CARD DECKS
+***************************************/
+
+.card-deck {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
