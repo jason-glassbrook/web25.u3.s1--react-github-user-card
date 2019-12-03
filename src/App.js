@@ -1,6 +1,9 @@
 /// external modules ///
 import React from 'react';
 
+/// internal modules ///
+import remote from './tools/remotely/remote';
+
 /// styles ///
 import './styles/App.css';
 
