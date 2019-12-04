@@ -27,6 +27,9 @@ const init = {
   COMPONENT
 ***************************************/
 class App extends React.Component {
+  /***************************************
+    lifecycle
+  ***************************************/
   constructor (props) {
     /* DEV */ console.log (`>>> App : constructing... <<<`);
     super (props);
