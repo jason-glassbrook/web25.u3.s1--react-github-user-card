@@ -29,28 +29,27 @@ const init = {
 ***************************************/
 class App extends React.Component {
   constructor (props) {
-    console.log (`>>> App : constructing... <<<`);
+    /* DEV */ console.log (`>>> App : constructing... <<<`);
     super (props);
     this.state = {
       'user' : init.user,
     };
-    console.log (remote);
   };
 
   componentDidMount () {
-    console.log (`>>> App : did mount... <<<`);
+    /* DEV */ console.log (`>>> App : did mount... <<<`);
   };
 
   componentDidUpdate () {
-    console.log (`>>> App : did update... <<<`);
+    /* DEV */ console.log (`>>> App : did update... <<<`);
   };
 
   componentWillUnmount () {
-    console.log (`>>> App : will unmount... <<<`);
+    /* DEV */ console.log (`>>> App : will unmount... <<<`);
   };
 
   render () {
-    console.log (`>>> App : rendering... <<<`);
+    /* DEV */ console.log (`>>> App : rendering... <<<`);
     return (
       <div className='App'>
         App
