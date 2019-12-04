@@ -24,7 +24,7 @@ const CardsDeck = ({ row , col , wrap , children , ...rest }) => {
       items : { across : 'stretch' , along : 'start' },
     }}
     >
-      {children.map ((card) => (
+      {React.Children.map (children, (card) => (
         <li>{card}</li>
       ))}
     </Container>
