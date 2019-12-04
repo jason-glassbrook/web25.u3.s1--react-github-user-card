@@ -68,34 +68,6 @@ class App extends React.Component {
     };
   };
 
-  setStateData (point, data) {
-    setStateData (
-      (x) => (this.setState (x)) /* WHAT? WHY? */,
-      point, data
-    );
-  };
-
-  resetStateData (point) {
-    this.setStateData (point, init.data[point])
-  };
-
-  getRemoteData (point, args) {
-    getRemoteData (point, args,
-      (axResponse) => (this.handleRemoteDataResponse (point, axResponse)),
-      (axError) => (this.handleRemoteDataError (point, axError))
-    );
-  };
-
-  handleRemoteDataResponse (point, axResponse) {
-    console.log (point, axResponse);
-    this.setStateData (point, axResponse.data)
-  };
-
-  handleRemoteDataError (point, axError) {
-    console.warn (point, axError);
-    this.resetStateData (point);
-  };
-
   componentDidMount () {
     /* DEV */ console.log (`>>> App : did mount... <<<`);
     this.getRemoteData ('user', [this.state.user]);
@@ -120,6 +92,36 @@ class App extends React.Component {
     );
   };
 
+  /***************************************
+    data
+  ***************************************/
+  setStateData (point, data) {
+    setStateData (
+      (...x) => (this.setState (...x)) /* WHAT? WHY? */,
+      point, data
+    );
+  };
+
+  resetStateData (point) {
+    this.setStateData (point, init.data[point])
+  };
+
+  getRemoteData (point, args) {
+    getRemoteData (point, args,
+      (axResponse) => (this.handleRemoteDataResponse (point, axResponse)),
+      (axError) => (this.handleRemoteDataError (point, axError))
+    );
+  };
+
+  handleRemoteDataResponse (point, axResponse) {
+    console.log (point, axResponse);
+    this.setStateData (point, axResponse.data)
+  };
+
+  handleRemoteDataError (point, axError) {
+    console.warn (point, axError);
+    this.resetStateData (point);
+  };
 };
 
 /**************************************/
