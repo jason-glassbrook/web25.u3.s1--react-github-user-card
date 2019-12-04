@@ -82,9 +82,9 @@ class App extends React.Component {
 
   componentDidMount () {
     /* DEV */ console.log (`>>> App : did mount... <<<`);
-    this.getRemoteData ('user', [this.user]);
-    this.getRemoteData ('user_followers', [this.user]);
-    this.getRemoteData ('user_following', [this.user]);
+    this.getRemoteData ('user', [this.state.user]);
+    this.getRemoteData ('user_followers', [this.state.user]);
+    this.getRemoteData ('user_following', [this.state.user]);
   };
 
   componentDidUpdate () {
