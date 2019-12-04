@@ -23,10 +23,16 @@ const init = {
   },
 };
 
-const setStateData = (point, data, setState) => {
-  setState ((state) => ({
-    'data' : immutably.set (state.data, point, data),
+const setFieldOfState = (setState, field, valueFun) => {
+  setState ((state, props) => ({
+    [field] : valueFun (state, props),
   }));
+}
+
+const setStateData = (setState, point, data) => {
+  setFieldOfState (setState, 'data',
+    (state) => (immutably.set (state.data, point, data)),
+  );
 };
 
 const getRemoteData = (point, args, setState) => {
@@ -63,7 +69,7 @@ class App extends React.Component {
   };
 
   setStateData (point, data) {
-    setStateData (point, data, this.setState);
+    setStateData (this.setState, point, data);
   }
 
   getRemoteData (point, args) {
