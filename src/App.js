@@ -16,10 +16,10 @@ import { routes as urls, fullURL } from './data/app/routes';
 const init = {
   'user' : 'jason-glassbrook',
   'data' : {
-      'self' : {},
-      'followers' : [{}],
-      'following' : [{}],
-    },
+    'user' : {},
+    'user_followers' : [{}],
+    'user_following' : [{}],
+  },
   },
 };
 
