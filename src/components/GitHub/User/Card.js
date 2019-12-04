@@ -1,8 +1,11 @@
 /// external modules ///
-import React from 'react';
+import React, {Fragment} from 'react';
 
 /// internal modules ///
 import Card from '../../basics/cards/Card';
+import CardHead from '../../basics/cards/CardHead';
+import CardBody from '../../basics/cards/CardBody';
+import CardFoot from '../../basics/cards/CardFoot';
 
 /***************************************
   COMPONENT
@@ -35,8 +38,20 @@ class GitHub_User_Card extends React.Component {
     const { user } = this.props;
     return (
       <Card className='GitHub_User_Card'>
-        <p>GitHub_User_Card</p>
-        <p>login: {user.login}</p>
+        <CardHead>
+          <img
+          className='card-image'
+          src={user.avatar_url}
+          alt={`avatar of ${user.login}`}
+          />
+        </CardHead>
+        <CardBody>
+          <h4>{user.login}</h4>
+          {user.name ? (<p>{user.name}</p>) : (<Fragment/>)}
+        </CardBody>
+        <CardFoot>
+          <a href={user.html_url}>{user.html_url}</a>
+        </CardFoot>
       </Card>
     );
   };
