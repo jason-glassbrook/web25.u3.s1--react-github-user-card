@@ -23,7 +23,7 @@ const init = {
   },
 };
 
-const getData = (point, args, setter) => {
+const getRemoteData = (point, args, setState) => {
   console.log (`--- ${point} : getting... ---`);
   axios
     .get (fullURL (urls.there.GH, point, ...args))
@@ -58,9 +58,9 @@ class App extends React.Component {
 
   componentDidMount () {
     /* DEV */ console.log (`>>> App : did mount... <<<`);
-    getData ('user', [this.user], this.setState);
-    getData ('user_followers', [this.user], this.setState);
-    getData ('user_following', [this.user], this.setState);
+    getRemoteData ('user', [this.user], this.setState);
+    getRemoteData ('user_followers', [this.user], this.setState);
+    getRemoteData ('user_following', [this.user], this.setState);
   };
 
   componentDidUpdate () {
