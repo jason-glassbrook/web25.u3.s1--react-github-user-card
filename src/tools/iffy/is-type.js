@@ -11,7 +11,7 @@
   isOf
   Check if input is of type _type_.
 --------------------------------------*/
-export const isOf = (name , maybe) => (
+export const isOf = (name, maybe) => (
   maybe && (toString.call(maybe) === '[object ' + name + ']')
 );
 
@@ -28,13 +28,13 @@ export const check = (
     'Date'      ,
     'RegExp'    ,
   ]
-  .reduce ((obj , name) => {
-    obj['is' + name] = (maybe) => (isOf (name , maybe));
+  .reduce ((obj, name) => {
+    obj['is' + name] = (maybe) => (isOf (name, maybe));
     return (obj);
-  } , {})
+  }, {})
 );
 
 /*--------------------------------------
   default
 --------------------------------------*/
-export default ({ ...check , isOf })
+export default ({ ...check, isOf })

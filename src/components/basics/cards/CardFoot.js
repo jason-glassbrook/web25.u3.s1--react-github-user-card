@@ -7,7 +7,7 @@ import './styles.css';
 /***************************************
   COMPONENT
 ***************************************/
-const CardFoot = ({ children , ...rest }) => {
+const CardFoot = ({ children, ...rest }) => {
   return (
     <footer
     className={`card-foot ${rest.className || ''}`.trim ()}

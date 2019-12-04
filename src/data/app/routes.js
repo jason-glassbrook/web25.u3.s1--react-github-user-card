@@ -16,7 +16,7 @@ export const routes = {
   },
 };
 
-export const fullURL = (domain , point , ...args) => {
+export const fullURL = (domain, point, ...args) => {
   // simply return domain as url if it's a string
   if (check.isString (domain)) {
     return (domain);

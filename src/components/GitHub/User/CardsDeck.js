@@ -33,7 +33,7 @@ class GitHub_User_CardsDeck extends React.Component {
 
   render () {
     /* DEV */ console.log (`>>> GitHub_User_CardsDeck : rendering... <<<`);
-    const { users , ...rest } = this.props;
+    const { users, ...rest } = this.props;
     return (
       <CardsDeck
       className='GitHub_User_CardsDeck'

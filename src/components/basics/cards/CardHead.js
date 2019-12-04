@@ -7,7 +7,7 @@ import './styles.css';
 /***************************************
   COMPONENT
 ***************************************/
-const CardHead = ({ children , ...rest }) => {
+const CardHead = ({ children, ...rest }) => {
   return (
     <header
     className={`card-head ${rest.className || ''}`.trim ()}

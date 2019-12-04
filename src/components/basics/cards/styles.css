@@ -13,7 +13,7 @@
   --card-inner-border: var(--size-01-px) solid var(--gray-300);
   /*------------------------------------*/
   background: White;
-  box-shadow: 0 0 var(--size-04-px) rgba(0 , 0 , 0 , 50%);
+  box-shadow: 0 0 var(--size-04-px) rgba(0, 0, 0, 50%);
 
   border-radius: var(--size-05-px);
 
@@ -30,7 +30,7 @@
 }
 
 /*/ background /*/
-.card-head , .card-foot {
+.card-head, .card-foot {
   background-color: var(--light);
 }
 

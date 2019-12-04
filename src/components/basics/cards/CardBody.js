@@ -7,7 +7,7 @@ import './styles.css';
 /***************************************
   COMPONENT
 ***************************************/
-const CardBody = ({ children , ...rest }) => {
+const CardBody = ({ children, ...rest }) => {
   return (
     <main
     className={`card-body ${rest.className || ''}`.trim ()}
