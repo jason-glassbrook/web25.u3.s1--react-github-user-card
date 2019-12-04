@@ -88,24 +88,39 @@ class App extends React.Component {
     /* DEV */ console.log (`>>> App : rendering... <<<`);
     return (
       <main className='App'>
-        App
+        <h1>react-github-user-card</h1>
         <section id='user'>
-          <UserCardsDeck
-          row wrap
-          users={[this.state.data.user]}
-          />
+          <header>
+            <h2>User</h2>
+          </header>
+          <main>
+            <UserCardsDeck
+            row wrap
+            users={[this.state.data.user]}
+            />
+          </main>
         </section>
         <section id='user_followers'>
-          <UserCardsDeck
-          row wrap
-          users={this.state.data.user_followers}
-          />
+          <header>
+            <h2>Followers</h2>
+          </header>
+          <main>
+            <UserCardsDeck
+            row wrap
+            users={this.state.data.user_followers}
+            />
+          </main>
         </section>
         <section id='user_following'>
-          <UserCardsDeck
-          row wrap
-          users={this.state.data.user_following}
-          />
+          <header>
+            <h2>Following</h2>
+          </header>
+          <main>
+            <UserCardsDeck
+            row wrap
+            users={this.state.data.user_following}
+            />
+          </main>
         </section>
       </main>
     );
