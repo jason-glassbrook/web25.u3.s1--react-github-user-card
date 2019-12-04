@@ -13,19 +13,19 @@ import './styles.css';
 ***************************************/
 const Container = Flex (styled.ol ``);
 
-const CardsDeck = ({ row , col , wrap , children , ...rest }) => {
+const CardsDeck = ({ row, col, wrap, keys, children, ...rest }) => {
   return (
     <Container
     className={`cards-deck ${rest.className || ''}`.trim ()}
     flex={{
-      row : row , col : col ,
+      row : row, col : col,
       wrap : wrap,
       lines : 'stretch',
-      items : { across : 'stretch' , along : 'start' },
+      items : { across : 'stretch', along : 'start' },
     }}
     >
-      {React.Children.map (children, (card) => (
-        <li>{card}</li>
+      {React.Children.map (children, (item, i) => (
+        <li key={keys[i]}>{item}</li>
       ))}
     </Container>
   );
