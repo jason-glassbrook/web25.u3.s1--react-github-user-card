@@ -40,7 +40,9 @@ class GitHub_User_Card extends React.Component {
     /* DEV */ console.log (`>>> GitHub_User_Card : rendering... <<<`);
     const { user } = this.props;
     return (
-      <Card className='GitHub_User_Card'>
+      <Card
+      className='GitHub_User_Card'
+      col>
         <CardHead>
           <img
           className='card-image'
