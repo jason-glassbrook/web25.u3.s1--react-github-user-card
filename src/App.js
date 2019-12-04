@@ -23,6 +23,23 @@ const init = {
   },
 };
 
+const getData = (point, args, setter) => {
+  console.log (`--- ${point} : getting... ---`);
+  axios
+    .get (fullURL (urls.there.GH, point, ...args))
+    .then ((axResponse) => {
+      console.log (`>>> ${point} : success <<<`);
+      console.log (axResponse);
+    })
+    .catch ((axError) => {
+      console.log (`>>> ${point} : failure <<<`);
+      console.log (axError);
+    })
+    .finally (() => {
+      console.log (`--- ${point}: done. ---`);
+    });
+};
+
 /***************************************
   COMPONENT
 ***************************************/
@@ -41,9 +58,9 @@ class App extends React.Component {
 
   componentDidMount () {
     /* DEV */ console.log (`>>> App : did mount... <<<`);
-    this.getData ('user');
-    this.getData ('user_followers');
-    this.getData ('user_following');
+    getData ('user', [this.user], this.setState);
+    getData ('user_followers', [this.user], this.setState);
+    getData ('user_following', [this.user], this.setState);
   };
 
   componentDidUpdate () {
@@ -63,25 +80,6 @@ class App extends React.Component {
     );
   };
 
-  /***************************************
-    remote
-  ***************************************/
-  getData (point) {
-    console.log (`--- ${point} : getting... ---`);
-    axios
-      .get (fullURL (urls.there.GH, point, this.state.user))
-      .then ((axResponse) => {
-        console.log (`>>> ${point} : success <<<`);
-        console.log (axResponse);
-      })
-      .catch ((axError) => {
-        console.log (`>>> ${point} : failure <<<`);
-        console.log (axError);
-      })
-      .finally (() => {
-        console.log (`--- ${point}: done. ---`);
-      });
-  }
 };
 
 /**************************************/
