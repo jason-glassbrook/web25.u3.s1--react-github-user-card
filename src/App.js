@@ -67,19 +67,19 @@ class App extends React.Component {
     remote
   ***************************************/
   getData (point) {
-    console.log (`--- getting ${point}... ---`);
+    console.log (`--- ${point} : getting... ---`);
     axios
       .get (fullURL (urls.there.GH, point, this.state.user))
       .then ((axResponse) => {
-        console.log (`>>> success <<<`);
+        console.log (`>>> ${point} : success <<<`);
         console.log (axResponse);
       })
       .catch ((axError) => {
-        console.log (`>>> failure <<<`);
+        console.log (`>>> ${point} : failure <<<`);
         console.log (axError);
       })
       .finally (() => {
-        console.log (`--- ...well that's done. ---`);
+        console.log (`--- ${point}: done. ---`);
       });
   }
 };
