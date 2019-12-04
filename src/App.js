@@ -23,6 +23,12 @@ const init = {
   },
 };
 
+const setStateData = (point, data, setState) => {
+  setState ((state) => ({
+    'data' : immutably.set (state.data, point, data),
+  }));
+};
+
 const getRemoteData = (point, args, setState) => {
   console.log (`--- ${point} : getting... ---`);
   axios
@@ -56,11 +62,15 @@ class App extends React.Component {
     };
   };
 
+  getRemoteData (point, args) {
+    getRemoteData (point, args, this.setState);
+  }
+
   componentDidMount () {
     /* DEV */ console.log (`>>> App : did mount... <<<`);
-    getRemoteData ('user', [this.user], this.setState);
-    getRemoteData ('user_followers', [this.user], this.setState);
-    getRemoteData ('user_following', [this.user], this.setState);
+    this.getRemoteData ('user', [this.user]);
+    this.getRemoteData ('user_followers', [this.user]);
+    this.getRemoteData ('user_following', [this.user]);
   };
 
   componentDidUpdate () {
