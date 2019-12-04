@@ -69,9 +69,11 @@ class App extends React.Component {
   };
 
   setStateData (point, data) {
-    // WHAT? //
-    setStateData (this.setState.bind (this), point, data);
-  }
+    setStateData (
+      (x) => (this.setState (x)) /* WHAT? WHY? */,
+      point, data
+    );
+  };
 
   resetStateData (point) {
     this.setStateData (point, init.data[point])
