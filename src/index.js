@@ -8,7 +8,7 @@ import App from './App';
 /// styles ///
 // import 'reset-css/reset.css';
 // import 'normalize-css/normalize.css';
-// import './styles/base.css';
+import './styles/o11-basics.css';
 import './styles/index.css';
 
 /***************************************
