@@ -6,11 +6,6 @@ import CardsDeck from '../../basics/cards/CardsDeck';
 import Card from './Card';
 
 /***************************************
-  STATES
-***************************************/
-const init = {};
-
-/***************************************
   COMPONENT
 ***************************************/
 class GitHub_User_CardsDeck extends React.Component {

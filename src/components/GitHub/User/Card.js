@@ -5,11 +5,6 @@ import React from 'react';
 import Card from '../../basics/cards/Card';
 
 /***************************************
-  STATES
-***************************************/
-const init = {};
-
-/***************************************
   COMPONENT
 ***************************************/
 class GitHub_User_Card extends React.Component {
