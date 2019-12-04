@@ -17,5 +17,5 @@
 img.card-image {
   height: var(--size-08-px);
   width:  var(--size-08-px);
-  border-radius: var(--size-inf-px);
+  border-radius: var(--inf-px);
 }
