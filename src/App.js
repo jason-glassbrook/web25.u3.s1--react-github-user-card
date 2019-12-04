@@ -21,7 +21,6 @@ const init = {
     'user_followers' : [{}],
     'user_following' : [{}],
   },
-  },
 };
 
 /***************************************
@@ -42,6 +41,9 @@ class App extends React.Component {
 
   componentDidMount () {
     /* DEV */ console.log (`>>> App : did mount... <<<`);
+    this.getData ('user');
+    this.getData ('user_followers');
+    this.getData ('user_following');
   };
 
   componentDidUpdate () {
