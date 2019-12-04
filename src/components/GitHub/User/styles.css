@@ -7,7 +7,15 @@
 
 /**************************************/
 
+.card-head {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 img.card-image {
   height: var(--size-08-px);
   width:  var(--size-08-px);
+  border-radius: var(--size-inf-px);
 }
