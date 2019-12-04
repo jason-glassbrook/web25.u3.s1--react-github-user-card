@@ -90,13 +90,19 @@ class App extends React.Component {
       <main className='App'>
         App
         <section id='user'>
-          <GithubUserCard/>
+          {[this.state.data.user].map ((item) => (
+            <GithubUserCard key={item.login}/>
+          ))}
         </section>
         <section id='user_followers'>
-          <GithubUserCard/>
+          {this.state.data.user_followers.map ((item) => (
+            <GithubUserCard key={item.login}/>
+          ))}
         </section>
         <section id='user_following'>
-          <GithubUserCard/>
+          {this.state.data.user_following.map ((item) => (
+            <GithubUserCard key={item.login}/>
+          ))}
         </section>
       </main>
     );
