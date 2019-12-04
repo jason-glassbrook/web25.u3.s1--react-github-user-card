@@ -87,42 +87,46 @@ class App extends React.Component {
   render () {
     /* DEV */ console.log (`>>> App : rendering... <<<`);
     return (
-      <main className='App'>
-        <h1>react-github-user-card</h1>
-        <section id='user'>
-          <header>
-            <h2>User</h2>
-          </header>
-          <main>
-            <UserCardsDeck
-            row wrap
-            users={[this.state.data.user]}
-            />
-          </main>
-        </section>
-        <section id='user_followers'>
-          <header>
-            <h2>Followers</h2>
-          </header>
-          <main>
-            <UserCardsDeck
-            row wrap
-            users={this.state.data.user_followers}
-            />
-          </main>
-        </section>
-        <section id='user_following'>
-          <header>
-            <h2>Following</h2>
-          </header>
-          <main>
-            <UserCardsDeck
-            row wrap
-            users={this.state.data.user_following}
-            />
-          </main>
-        </section>
-      </main>
+      <div className='App'>
+        <header>
+          <h1>react-github-user-card</h1>
+        </header>
+        <main>
+          <section id='user'>
+            <header>
+              <h2>User</h2>
+            </header>
+            <main>
+              <UserCardsDeck
+              row wrap
+              users={[this.state.data.user]}
+              />
+            </main>
+          </section>
+          <section id='user_followers'>
+            <header>
+              <h2>Followers</h2>
+            </header>
+            <main>
+              <UserCardsDeck
+              row wrap
+              users={this.state.data.user_followers}
+              />
+            </main>
+          </section>
+          <section id='user_following'>
+            <header>
+              <h2>Following</h2>
+            </header>
+            <main>
+              <UserCardsDeck
+              row wrap
+              users={this.state.data.user_following}
+              />
+            </main>
+          </section>
+        </main>
+      </div>
     );
   };
 
