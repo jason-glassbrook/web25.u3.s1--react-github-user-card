@@ -1,6 +1,9 @@
 /// external modules ///
 import React from 'react';
 
+/// internal modules ///
+import Card from '../../basics/cards/Card';
+
 /***************************************
   STATES
 ***************************************/
@@ -9,33 +12,37 @@ const init = {};
 /***************************************
   COMPONENT
 ***************************************/
-class GithubUserCard extends React.Component {
+class GitHub_User_Card extends React.Component {
   /***************************************
     lifecycle
   ***************************************/
   constructor (props) {
-    /* DEV */ console.log (`>>> GithubUserCard : constructing... <<<`);
+    /* DEV */ console.log (`>>> GitHub_User_Card : constructing... <<<`);
     super (props);
     this.state = {
     };
   };
 
   componentDidMount () {
-    /* DEV */ console.log (`>>> GithubUserCard : did mount... <<<`);
+    /* DEV */ console.log (`>>> GitHub_User_Card : did mount... <<<`);
   };
 
   componentDidUpdate () {
-    /* DEV */ console.log (`>>> GithubUserCard : did update... <<<`);
+    /* DEV */ console.log (`>>> GitHub_User_Card : did update... <<<`);
   };
 
   componentWillUnmount () {
-    /* DEV */ console.log (`>>> GithubUserCard : will unmount... <<<`);
+    /* DEV */ console.log (`>>> GitHub_User_Card : will unmount... <<<`);
   };
 
   render () {
-    /* DEV */ console.log (`>>> GithubUserCard : rendering... <<<`);
+    /* DEV */ console.log (`>>> GitHub_User_Card : rendering... <<<`);
+    const { user } = this.props;
     return (
-      <div className='GithubUserCard'>GithubUserCard</div>
+      <Card className='GitHub_User_Card'>
+        <p>GitHub_User_Card</p>
+        <p>login: {user.login}</p>
+      </Card>
     );
   };
 
@@ -48,4 +55,4 @@ class GithubUserCard extends React.Component {
 };
 
 /**************************************/
-export default GithubUserCard;
+export default GitHub_User_Card;
