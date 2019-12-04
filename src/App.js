@@ -36,19 +36,19 @@ const setStateData = (setState, point, data) => {
 };
 
 const getRemoteData = (point, args, handleResponse, handleError) => {
-  console.log (`--- ${point} : getting... ---`);
+  /* DEV */ console.log (`--- ${point} : getting... ---`);
   axios
     .get (fullURL (urls.there.GH, point, ...args))
     .then ((axResponse) => {
-      console.log (`>>> ${point} : success <<<`);
+      /* DEV */ console.log (`>>> ${point} : success <<<`);
       handleResponse (axResponse);
     })
     .catch ((axError) => {
-      console.warn (`>>> ${point} : failure <<<`);
+      /* DEV */ console.warn (`>>> ${point} : failure <<<`);
       handleError (axError);
     })
     .finally (() => {
-      console.log (`--- ${point} : done. ---`);
+      /* DEV */ console.log (`--- ${point} : done. ---`);
     });
 };
 
