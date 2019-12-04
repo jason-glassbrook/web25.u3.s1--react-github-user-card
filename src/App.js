@@ -4,7 +4,7 @@ import axios from 'axios';
 
 /// internal modules ///
 import immutably from './tools/immutably';
-import GithubUserCard from './components/GithubUserCard';
+import UserCardsDeck from './components/GitHub/User/CardsDeck';
 
 /// styles ///
 import './styles/App.css';
@@ -90,19 +90,22 @@ class App extends React.Component {
       <main className='App'>
         App
         <section id='user'>
-          {[this.state.data.user].map ((item) => (
-            <GithubUserCard key={item.login}/>
-          ))}
+          <UserCardsDeck
+          row wrap
+          users={[this.state.data.user]}
+          />
         </section>
         <section id='user_followers'>
-          {this.state.data.user_followers.map ((item) => (
-            <GithubUserCard key={item.login}/>
-          ))}
+          <UserCardsDeck
+          row wrap
+          users={this.state.data.user_followers}
+          />
         </section>
         <section id='user_following'>
-          {this.state.data.user_following.map ((item) => (
-            <GithubUserCard key={item.login}/>
-          ))}
+          <UserCardsDeck
+          row wrap
+          users={this.state.data.user_following}
+          />
         </section>
       </main>
     );
