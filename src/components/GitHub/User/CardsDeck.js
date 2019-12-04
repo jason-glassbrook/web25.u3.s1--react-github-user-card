@@ -35,7 +35,10 @@ class GitHub_User_CardsDeck extends React.Component {
     /* DEV */ console.log (`>>> GitHub_User_CardsDeck : rendering... <<<`);
     const { users , ...rest } = this.props;
     return (
-      <CardsDeck className='GitHub_User_CardsDeck' {...rest}>
+      <CardsDeck
+      className='GitHub_User_CardsDeck'
+      keys={users.map ((user) => (user.id))}
+      {...rest}>
         {users.map ((user) => (
           <Card key={user.id} user={user}/>
         ))}
