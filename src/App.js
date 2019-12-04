@@ -3,7 +3,7 @@ import React from 'react';
 import axios from 'axios';
 
 /// internal modules ///
-// import remote from './tools/remotely/remote';
+import immutably from './tools/immutably';
 
 /// styles ///
 import './styles/App.css';
