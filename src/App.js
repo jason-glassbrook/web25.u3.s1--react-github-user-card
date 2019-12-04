@@ -14,9 +14,8 @@ import { routes as urls, fullURL } from './data/app/routes';
   STATE
 ***************************************/
 const init = {
-  'user' : {
-    'name' : 'jason-glassbrook',
-    'data' : {
+  'user' : 'jason-glassbrook',
+  'data' : {
       'self' : {},
       'followers' : [{}],
       'following' : [{}],
@@ -33,6 +32,7 @@ class App extends React.Component {
     super (props);
     this.state = {
       'user' : init.user,
+      'data' : init.data,
     };
   };
 
