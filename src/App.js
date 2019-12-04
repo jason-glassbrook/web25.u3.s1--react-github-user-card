@@ -77,14 +77,14 @@ class App extends React.Component {
 
   resetStateData (point) {
     this.setStateData (point, init.data[point])
-  }
+  };
 
   getRemoteData (point, args) {
     getRemoteData (point, args,
       (axResponse) => (this.handleRemoteDataResponse (point, axResponse)),
       (axError) => (this.handleRemoteDataError (point, axError))
     );
-  }
+  };
 
   handleRemoteDataResponse (point, axResponse) {
     console.log (point, axResponse);
@@ -94,7 +94,7 @@ class App extends React.Component {
   handleRemoteDataError (point, axError) {
     console.warn (point, axError);
     this.resetStateData (point);
-  }
+  };
 
   componentDidMount () {
     /* DEV */ console.log (`>>> App : did mount... <<<`);
