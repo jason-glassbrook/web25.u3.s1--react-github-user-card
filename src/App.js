@@ -96,7 +96,7 @@ class App extends React.Component {
     data
   ***************************************/
   setStateData (point, data) {
-    setStateData (
+    /*module.*/setStateData (
       (...x) => (this.setState (...x)) /* WHAT? WHY? */,
       point, data
     );
@@ -107,7 +107,7 @@ class App extends React.Component {
   };
 
   getRemoteData (point, args) {
-    getRemoteData (point, args,
+    /*module.*/getRemoteData (point, args,
       (axResponse) => (this.handleRemoteDataResponse (point, axResponse)),
       (axError) => (this.handleRemoteDataError (point, axError))
     );
