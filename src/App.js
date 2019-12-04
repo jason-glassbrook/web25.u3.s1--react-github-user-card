@@ -1,5 +1,6 @@
 /// external modules ///
 import React from 'react';
+import axios from 'axios';
 
 /// internal modules ///
 // import remote from './tools/remotely/remote';
@@ -59,6 +60,26 @@ class App extends React.Component {
       </div>
     );
   };
+
+  /***************************************
+    remote
+  ***************************************/
+  getData (point) {
+    console.log (`--- getting ${point}... ---`);
+    axios
+      .get (fullURL (urls.there.GH, point, this.state.user))
+      .then ((axResponse) => {
+        console.log (`>>> success <<<`);
+        console.log (axResponse);
+      })
+      .catch ((axError) => {
+        console.log (`>>> failure <<<`);
+        console.log (axError);
+      })
+      .finally (() => {
+        console.log (`--- ...well that's done. ---`);
+      });
+  }
 };
 
 /**************************************/
