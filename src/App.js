@@ -48,7 +48,7 @@ const getRemoteData = (point, args, handleResponse, handleError) => {
       handleError (axError);
     })
     .finally (() => {
-      console.log (`--- ${point}: done. ---`);
+      console.log (`--- ${point} : done. ---`);
     });
 };
 
