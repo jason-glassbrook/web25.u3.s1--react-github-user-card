@@ -2,7 +2,7 @@
 import React from 'react';
 
 /// internal modules ///
-import remote from './tools/remotely/remote';
+// import remote from './tools/remotely/remote';
 
 /// styles ///
 import './styles/App.css';
@@ -34,6 +34,7 @@ class App extends React.Component {
     this.state = {
       'user' : init.user,
     };
+    console.log (remote);
   };
 
   componentDidMount () {
