@@ -122,6 +122,8 @@ class App extends React.Component {
     console.warn (point, axError);
     this.resetStateData (point);
   };
+
+  /**************************************/
 };
 
 /**************************************/
