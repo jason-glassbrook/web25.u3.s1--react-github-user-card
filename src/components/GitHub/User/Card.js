@@ -7,6 +7,9 @@ import CardHead from '../../basics/cards/CardHead';
 import CardBody from '../../basics/cards/CardBody';
 import CardFoot from '../../basics/cards/CardFoot';
 
+/// styles ///
+import './styles.css';
+
 /***************************************
   COMPONENT
 ***************************************/
