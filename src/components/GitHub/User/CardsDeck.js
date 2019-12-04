@@ -37,7 +37,7 @@ class GitHub_User_CardsDeck extends React.Component {
     return (
       <CardsDeck className='GitHub_User_CardsDeck' {...rest}>
         {users.map ((user) => (
-          <Card key={user.login} user={user}/>
+          <Card key={user.id} user={user}/>
         ))}
       </CardsDeck>
     );
