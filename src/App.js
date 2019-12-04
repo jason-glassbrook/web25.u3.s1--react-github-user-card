@@ -72,6 +72,10 @@ class App extends React.Component {
     setStateData (this.setState, point, data);
   }
 
+  resetStateData (point) {
+    this.setStateData (point, init.data[point])
+  }
+
   getRemoteData (point, args) {
     getRemoteData (point, args, this.setState);
   }
