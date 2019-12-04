@@ -4,6 +4,7 @@ import axios from 'axios';
 
 /// internal modules ///
 import immutably from './tools/immutably';
+import GithubUserCard from './components/GithubUserCard';
 
 /// styles ///
 import './styles/App.css';
@@ -86,9 +87,18 @@ class App extends React.Component {
   render () {
     /* DEV */ console.log (`>>> App : rendering... <<<`);
     return (
-      <div className='App'>
+      <main className='App'>
         App
-      </div>
+        <section id='user'>
+          <GithubUserCard/>
+        </section>
+        <section id='user_followers'>
+          <GithubUserCard/>
+        </section>
+        <section id='user_following'>
+          <GithubUserCard/>
+        </section>
+      </main>
     );
   };
 
