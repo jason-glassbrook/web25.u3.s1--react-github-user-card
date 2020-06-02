@@ -1,0 +1,30 @@
+/*******************************************************************************
+  CARD STYLES
+*******************************************************************************/
+
+@import url('../../../styles/o11-sizes.css');
+@import url('../../../styles/o11-colors.css');
+
+/**************************************/
+
+.cards-deck {
+  justify-content: center;
+  padding: var(--size-05-px);
+}
+
+.card {
+  margin: var(--size-05-px);
+}
+
+.card-head {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+img.card-image {
+  height: var(--size-08-px);
+  width:  var(--size-08-px);
+  border-radius: var(--inf-px);
+}
